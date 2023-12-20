@@ -60,7 +60,7 @@ class AuthController extends Controller
 
         $response = [
             'user' => $user,
-            'token' => $token->accessToken, // Use accessToken instead of plainTextToken
+            'token' => $token->accessToken,
         ];
 
         return $response;
