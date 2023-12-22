@@ -51,14 +51,12 @@ class AuthController extends Controller
             ]);
         }
 
-        Login::create([
-            'email' => $validatedData['email'],
-            'login_time' => now(),
-        ]);
+        Login::create($request->all());
 
         $token = $user->createToken($validatedData['email']);
 
         $response = [
+            'message' => 'User logged in successfully',
             'user' => $user,
             'token' => $token->accessToken,
         ];

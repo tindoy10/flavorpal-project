@@ -12,7 +12,6 @@ return new class extends Migration
             $table->id('user_id');
             $table->string('email');
             $table->timestamp('login_time')->useCurrent();
-            // Add more columns as needed (e.g., IP address, user agent, etc.)
             $table->timestamps();
         });
     }

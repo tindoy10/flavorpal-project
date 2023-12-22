@@ -14,10 +14,10 @@ class CreateUserPreferencesTable extends Migration
     public function up()
     {
         Schema::create('user_preference', function (Blueprint $table) {
-            $table->id('preference_id'); // Auto-incremental primary key
+            $table->id('preference_id'); 
             $table->unsignedBigInteger('user_id');
             $table->string('preference_type');
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->timestamps(); 
 
             // Define foreign key constraint
             $table->foreign('user_id')->references('user_id')->on('logins')->onDelete('cascade');
