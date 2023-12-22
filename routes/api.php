@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\NutritionController;
 use App\Http\Controllers\Api\RecipeController;
-use App\Http\Controllers\Api\SavedRecipeController;
 use App\Http\Controllers\Api\UserPreferenceController;
 use App\Http\Controllers\Api\RatingController;
 
@@ -48,10 +47,6 @@ Route::controller(NutritionController::class)->group(function () {
 // Route for the RatingController API
 
 Route::post('/rating', [RatingController::class, 'store']);
-
-// Route for the SavedRecipeController API
-
-Route::post('/saved-recipe', [SavedRecipeController::class, 'store']);
 
 // Route for the UserPreferenceController API
 
